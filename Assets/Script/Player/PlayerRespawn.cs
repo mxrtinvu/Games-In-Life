@@ -13,10 +13,12 @@ public class PlayerRespawn : MonoBehaviour
   public void Respawn()
   {
     transform.position = currentCheckpoint.position;
+    //move player to checkpoint position
     playerHealth.Respawn();
+    //restore the players health
 
     Camera.main.GetComponent<CameraController>().MoveToNewRoom(currentCheckpoint.parent);
-    //if there is object checkpoint under a parent room then move to this room
+    //if there is object checkpoint under a parent room then move camera to this room
   }
 
   private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +29,7 @@ public class PlayerRespawn : MonoBehaviour
       currentCheckpoint = collision.transform;
       collision.GetComponent<Collider2D>().enabled = false;
       collision.GetComponent<Animator>().SetTrigger("appear");
-      //run appear animation after death at this checkpoint
+      //run appear animation
     }
   }
 }
