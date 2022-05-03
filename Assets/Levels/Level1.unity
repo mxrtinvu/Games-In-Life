@@ -110925,10 +110925,10 @@ Transform:
   - {fileID: 2024866418}
   - {fileID: 1771589002}
   - {fileID: 1568626411}
+  - {fileID: 1052914402}
   - {fileID: 1921333090}
   - {fileID: 951164479}
   - {fileID: 1251651891}
-  - {fileID: 1052914402}
   - {fileID: 448403610}
   m_Father: {fileID: 1123650725}
   m_RootOrder: 9
@@ -137438,7 +137438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67ead18f9044840f797eb0c5944928a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: I guess i do feel more aggressive and stressful when I play...
+  input: I guess I do feel more aggressive and stressful when I play...
   delay: 0.02
   delayBetweenLines: 0.5
 --- !u!114 &1963538304
