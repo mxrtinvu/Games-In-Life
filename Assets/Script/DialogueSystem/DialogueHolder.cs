@@ -11,6 +11,7 @@ namespace DialogueSystem
     {
       dialogueSeq = dialogueSequence();
       StartCoroutine(dialogueSeq);
+      //start dialogue sequence between user and npc
     }
 
     private void Update()
@@ -20,6 +21,8 @@ namespace DialogueSystem
         Deactivate();
         gameObject.SetActive(false);
         StopCoroutine(dialogueSeq);
+        //stop the dialogue sequence by using the key Q
+        //remove the game object dialogue 
       }
     }
     private IEnumerator dialogueSequence()
@@ -29,6 +32,7 @@ namespace DialogueSystem
         Deactivate();
         transform.GetChild(i).gameObject.SetActive(true);
         yield return new WaitUntil(() => transform.GetChild(i).GetComponent<DialogueLine>().finished);
+        //waits until previous line is finifhsed
       }
       gameObject.SetActive(false);
     }

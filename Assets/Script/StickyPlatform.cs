@@ -10,6 +10,8 @@ public class StickyPlatform : MonoBehaviour
     if (collision.gameObject.name == "Player")
     {
       collision.gameObject.transform.SetParent(transform);
+      //on collision with moving platform change player to child of game object parent
+      //so that the player can move as one with the game object
     }
   }
 
@@ -18,6 +20,7 @@ public class StickyPlatform : MonoBehaviour
     if (collision.gameObject.name == "Player")
     {
       collision.gameObject.transform.SetParent(null);
+      //remove player from the set parent
     }
   }
 }

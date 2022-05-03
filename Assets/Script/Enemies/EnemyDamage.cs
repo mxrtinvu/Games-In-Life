@@ -8,5 +8,6 @@ public class EnemyDamage : MonoBehaviour
   {
     if(collision.tag == "Player")
         collision.GetComponent<Health>().TakeDamage(damage);
+        //if enemy collides with a game object tagged player then inflict damage
   }
 }

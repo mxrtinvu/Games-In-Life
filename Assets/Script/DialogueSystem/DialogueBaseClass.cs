@@ -7,6 +7,7 @@ namespace DialogueSystem
   public class DialogueBaseClass : MonoBehaviour
   {
     public bool finished { get; protected set; }
+    //when one dialogue is finished
     protected IEnumerator WriteText(string input, Text textHolder, float delay, float delayBetweenLines)
     {
 
@@ -14,6 +15,7 @@ namespace DialogueSystem
       {
         textHolder.text += input[i];
         yield return new WaitForSeconds(delay);
+        //loop every letter into our textholder with a delay so that it is typed out
       }
 
       //yield return new WaitForSeconds(delayBetweenLines);

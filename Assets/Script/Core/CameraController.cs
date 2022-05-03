@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
   private void Update()
   {
     transform.position = new Vector3(player.position.x, transform.position.y, transform.position.z);
+    //transform.position will be a player followed camera only horizontal
   }
 
   public void MoveToNewRoom(Transform _newRoom)
